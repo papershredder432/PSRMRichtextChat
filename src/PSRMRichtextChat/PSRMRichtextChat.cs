@@ -71,15 +71,15 @@ namespace PSRMRichtextChat
             if (isFound)
             {
                 ChatManager.serverSendMessage(
-                    foundGroup.RichText.Replace("%playerMsg%", text)
-                        .Replace("%playerName%", player.playerID.characterName), Color.white, null, null,
+                    $"[{mode.ToString()}] {foundGroup.RichText.Replace("%playerMsg%", text).Replace("%playerName%", player.playerID.characterName)}",
+                    Color.white, null, null,
                     mode, uPlayer.SteamProfile.AvatarIcon.ToString(), true);
             }
             else
             {
                 ChatManager.serverSendMessage(
-                    instance.Configuration.Instance.DefaultRichText.Replace("%playerMsg%", text)
-                        .Replace("%playerName%", player.playerID.characterName), Color.white, null, null,
+                    $"[{mode.ToString()}] {instance.Configuration.Instance.DefaultRichText.Replace("%playerMsg%", text).Replace("%playerName%", player.playerID.characterName)}",
+                    Color.white, null, null,
                     mode, uPlayer.SteamProfile.AvatarIcon.ToString(), true);
             }
         }

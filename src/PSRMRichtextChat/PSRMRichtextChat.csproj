@@ -59,6 +59,7 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Commands\RichBroadcast.cs" />
         <Compile Include="PSRMRichtextChat.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="PSRMRichtextChatConfiguration.cs" />
