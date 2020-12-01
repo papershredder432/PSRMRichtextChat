@@ -51,7 +51,7 @@ namespace PSRMRichtextChat
         {
             bool isFound = false;
             RichTextOptions foundGroup = null;
-            
+
             visible = false;
             var uPlayer = UnturnedPlayer.FromCSteamID(player.playerID.steamID);
 
@@ -73,14 +73,14 @@ namespace PSRMRichtextChat
                 ChatManager.serverSendMessage(
                     foundGroup.RichText.Replace("%playerMsg%", text)
                         .Replace("%playerName%", player.playerID.characterName), Color.white, null, null,
-                    EChatMode.SAY, uPlayer.SteamProfile.AvatarIcon.ToString(), true);
+                    mode, uPlayer.SteamProfile.AvatarIcon.ToString(), true);
             }
             else
             {
                 ChatManager.serverSendMessage(
                     instance.Configuration.Instance.DefaultRichText.Replace("%playerMsg%", text)
                         .Replace("%playerName%", player.playerID.characterName), Color.white, null, null,
-                    EChatMode.SAY, uPlayer.SteamProfile.AvatarIcon.ToString(), true);
+                    mode, uPlayer.SteamProfile.AvatarIcon.ToString(), true);
             }
         }
     }
